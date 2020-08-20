@@ -1,0 +1,1635 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="54"
+    android:background="#ffffff"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:id="@+id/bmi_controller_view">
+
+
+
+
+    <!-- 공백용 텍스트뷰-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/bmi_controller_view_blank_1"/>
+
+
+    <LinearLayout
+        android:id="@+id/sex_LinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="47dp"
+            android:layout_height="18dp"
+            android:textColor="#3168FF"
+            android:text="BMI/BMR"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="1dp"/>
+
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3" />
+
+
+        <ImageView
+            android:layout_width="13.5dp"
+            android:layout_height="36dp"
+            android:background="@drawable/man_img"/>
+        <!-- 빈 공간-->
+        <TextView
+            android:layout_width="16.5dp"
+            android:layout_height="match_parent"/>
+        <LinearLayout
+            android:layout_width="44dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1"
+            android:gravity="center">
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:id="@+id/bmi_seekerbar_sex"
+                android:background="@drawable/ic_custom_seekbar_background"
+                android:max="1"
+                android:progress="0"
+                android:progressDrawable="@null"
+                android:thumb="@drawable/ic_custom_seekbar_tumb" />
+        </LinearLayout>
+        <!-- 빈 공간-->
+        <TextView
+            android:layout_width="16.5dp"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:layout_width="13.5dp"
+            android:layout_height="36dp"
+            android:background="@drawable/woman_img"/>
+        <!-- 빈 공간-->
+
+    </LinearLayout>
+
+    <!-- 공백용 텍스트뷰-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/bmi_controller_view_blank_2"/>
+
+
+    <LinearLayout
+        android:id="@+id/age_LinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:layout_weight="2"
+            android:weightSum="1">
+            <!-- 빈 공간-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.65" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.15"
+                android:weightSum="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.2"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.8"
+                    android:text="나이"
+                    android:gravity="right|bottom"
+                    android:autoSizeTextType="uniform"
+                    android:textColor="#3168FF"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/bmi_age_thumb_text"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.13"
+                android:text="120"
+                android:autoSizeTextType="uniform"
+                android:gravity="right"
+                android:layout_gravity="left"
+                android:textColor="#3168FF"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.05"
+                android:weightSum="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.2"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.8"
+                    android:text="Y"
+                    android:gravity="left|bottom"
+                    android:autoSizeTextType="uniform"
+                    android:textColor="#3168FF"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="47dp">
+
+            <!-- AGE SEEKBAR 부분-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="131">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="121">
+                    <SeekBar
+                        android:id="@+id/bmi_seekerbar_age"
+                        android:progress="0"
+                        android:max="40"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:progressDrawable="@null"
+                        android:thumb="@null"
+                        >
+                    </SeekBar>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- height SEEKBAR 눈금 보여질 부분-->
+            <LinearLayout
+                android:id="@+id/age_seekbar_show_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="43"
+                android:background="@drawable/rectangle">
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show1"
+                    android:scaleType="fitXY"
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show2"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show3"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show4"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show5"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show6"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show7"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show8"
+                    android:scaleType="fitXY"
+
+                    />
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show9"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show10"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show11"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show12"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show13"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show14"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show15"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show16"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show17"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show18"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show19"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show20"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show21"
+                    android:scaleType="fitXY"
+
+                    />
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show22"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show23"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show24"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show25"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show26"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show27"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show28"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show29"
+                    android:scaleType="fitXY"
+
+                    />
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show30"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show31"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show32"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show33"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show34"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show35"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show36"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show37"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show38"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show39"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show40"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/age_seek_bar_show41"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <LinearLayout
+                    android:id="@+id/red_triangle_age"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="10">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:src="@drawable/red_triangle"
+                        android:scaleType="fitXY"
+                        />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- 공백용 텍스트뷰-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/bmi_controller_view_blank_3"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/height_LinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:layout_weight="2"
+            android:weightSum="1">
+            <!-- 빈 공간-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.55" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:weightSum="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.2"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.8"
+                    android:text="키"
+                    android:gravity="right|bottom"
+                    android:autoSizeTextType="uniform"
+                    android:textColor="#3168FF"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/bmi_height_thumb_text"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.15"
+                android:text="180"
+                android:autoSizeTextType="uniform"
+                android:gravity="right"
+                android:layout_gravity="left"
+                android:textColor="#3168FF"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.05"
+                android:weightSum="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.2"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.8"
+                    android:text="cm"
+                    android:gravity="left|bottom"
+                    android:autoSizeTextType="uniform"
+                    android:textColor="#3168FF"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="47dp">
+            <!-- height SEEKBAR 부분-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="394">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="16"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="362">
+                    <SeekBar
+                        android:id="@+id/bmi_seekerbar_height"
+                        android:progress="0"
+                        android:max="40"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:progressDrawable="@null"
+                        android:thumb="@null"
+                        >
+                    </SeekBar>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- height SEEKBAR 눈금 보여질 부분-->
+            <LinearLayout
+                android:id="@+id/height_seekbar_show_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="43"
+                android:background="@drawable/rectangle">
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show1"
+                    android:scaleType="fitXY"
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show2"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show3"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show4"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show5"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show6"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show7"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show8"
+                    android:scaleType="fitXY"
+
+                    />
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show9"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show10"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show11"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show12"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show13"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show14"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show15"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show16"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show17"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show18"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show19"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show20"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show21"
+                    android:scaleType="fitXY"
+
+                    />
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show22"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show23"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show24"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show25"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show26"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show27"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show28"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show29"
+                    android:scaleType="fitXY"
+
+                    />
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show30"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show31"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show32"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show33"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show34"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show35"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show36"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show37"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show38"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show39"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show40"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/height_seek_bar_show41"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <LinearLayout
+                    android:id="@+id/red_triangle_height"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="10">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:src="@drawable/red_triangle"
+                        android:scaleType="fitXY"
+                        />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- 공백용 텍스트뷰-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/bmi_controller_view_blank_4"/>
+
+
+    <LinearLayout
+        android:id="@+id/weight_LinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:weightSum="1">
+            <!-- 빈 공간-->
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.55" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:weightSum="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.2"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.8"
+                    android:text="몸무게"
+                    android:gravity="right|bottom"
+                    android:autoSizeTextType="uniform"
+                    android:textColor="#3168FF"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/bmi_weight_thumb_text"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.15"
+                android:text="180"
+                android:autoSizeTextType="uniform"
+                android:gravity="right"
+                android:layout_gravity="left"
+                android:textColor="#3168FF"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.05"
+                android:weightSum="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.2"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.8"
+                    android:text="kg"
+                    android:gravity="left|bottom"
+                    android:autoSizeTextType="uniform"
+                    android:textColor="#3168FF"/>
+            </LinearLayout>
+        </LinearLayout>>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="47dp">
+            <!-- AGE SEEKBAR 부분-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="125">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="121">
+                    <SeekBar
+                        android:id="@+id/bmi_seekerbar_weight"
+                        android:progress="0"
+                        android:max="40"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:progressDrawable="@null"
+                        android:thumb="@null"
+                        >
+                    </SeekBar>
+
+                </LinearLayout>
+            </LinearLayout>
+            <!-- weight SEEKBAR 보여질 이미지 부분-->
+
+            <!-- weight SEEKBAR 눈금 보여질 부분-->
+            <LinearLayout
+                android:id="@+id/weight_seekbar_show_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="43"
+                android:background="@drawable/rectangle">
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show1"
+                    android:scaleType="fitXY"
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show2"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show3"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show4"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show5"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show6"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show7"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show8"
+                    android:scaleType="fitXY"
+
+                    />
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show9"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show10"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show11"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show12"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show13"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show14"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show15"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show16"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show17"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show18"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show19"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show20"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show21"
+                    android:scaleType="fitXY"
+
+                    />
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show22"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show23"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show24"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show25"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show26"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show27"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show28"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show29"
+                    android:scaleType="fitXY"
+
+                    />
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show30"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show31"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show32"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show33"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show34"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show35"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show36"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show37"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show38"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show39"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show40"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/weight_seek_bar_show41"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <LinearLayout
+                    android:id="@+id/red_triangle_weight"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="10">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:src="@drawable/red_triangle"
+                        android:scaleType="fitXY"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

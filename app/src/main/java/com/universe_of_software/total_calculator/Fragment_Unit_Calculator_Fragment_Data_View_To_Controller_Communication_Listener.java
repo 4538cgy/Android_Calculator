@@ -1,0 +1,4 @@
+package com.universe_of_software.total_calculator;
+
+public interface Fragment_Unit_Calculator_Fragment_Data_View_To_Controller_Communication_Listener {
+}

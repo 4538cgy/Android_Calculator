@@ -1,0 +1,4 @@
+include ':Custom_Seekbar-LIB'
+include ':dwrulerviewlibrary-release'
+rootProject.name='TeamFirst_UOS'
+include ':app'

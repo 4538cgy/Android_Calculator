@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.6"
+        android:weightSum="1"
+        android:orientation="vertical"
+        android:id="@+id/bmi_result_recyclerView"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.12"
+        android:weightSum="10"
+        android:orientation="horizontal">
+        <!-- 여백-->
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:weightSum="10"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3.5"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6.5"
+                android:autoSizeTextType="uniform"
+                android:gravity="right|bottom"
+                android:textSize="12dp"
+                android:textColor="#3168FF"
+                android:textStyle="normal"
+                android:text="BMI" />
+        </LinearLayout>
+
+        <!--여백 텍스트뷰-->
+        <TextView
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            />
+        <TextView
+            android:id="@+id/Bmi_result_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:autoSizeTextType="uniform"
+            android:gravity="right|bottom"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:textColor="#3168FF"
+            android:text="BMI " />
+
+
+    </LinearLayout>
+
+
+    <!--결과값 시커바-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.05">
+        <TextView
+            android:id="@+id/bmi_result_seekbar_text"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="1dp"
+            android:textColor="#3168FF"
+            android:gravity="center"
+            android:text="result"/>
+    </LinearLayout>
+    <!--여백 텍스트뷰-->
+
+    <LinearLayout
+        android:id="@+id/bmi_result_Linerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.05"
+        android:orientation="horizontal"
+        android:weightSum="180">
+
+        <ImageView
+            android:id="@+id/bmi_result_thumb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:background="@drawable/red_triangle" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        />
+
+<!--    결과 값 이미지 뷰-->
+    <ImageView
+        android:id="@+id/bmi_result_background"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.05" />
+
+
+</LinearLayout>

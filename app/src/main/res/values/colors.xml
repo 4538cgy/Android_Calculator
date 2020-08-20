@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+
+    <color name="bmi_result_1">#3168FF</color>
+    <color name="bmi_result_2">#7cdfb1</color>
+    <color name="bmi_result_3">#90ff9c</color>
+    <color name="bmi_result_4">#ffb547</color>
+    <color name="bmi_result_5">#ff6666</color>
+</resources>

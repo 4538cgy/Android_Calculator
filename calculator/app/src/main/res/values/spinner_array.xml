@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="length">
+        <item>밀리미터(mm)</item>
+        <item>센티미터(cm)</item>
+        <item>미터(m)</item>
+        <item>킬로미터(km)</item>
+        <item>인치(in)</item>
+        <item>피트(ft)</item>
+        <item>야드(yd)</item>
+        <item>마일(mile)</item>
+        <item>자(尺)</item>
+        <item>간(間)</item>
+        <item>정(町)</item>
+        <item>리(理)</item>
+    </string-array>
+
+    <string-array name="area">
+        <item>제곱미터(m²)</item>
+        <item>아르(a)</item>
+        <item>헥타르(ha)</item>
+        <item>제곱킬로미터(km²)</item>
+        <item>제곱피트(ft²)</item>
+        <item>제곱야드(yd²)</item>
+        <item>에이커(ac)</item>
+        <item>평방자</item>
+        <item>평</item>
+        <item>단보</item>
+        <item>정보</item>
+
+    </string-array>
+
+    <string-array name="weight">
+        <item>밀리그램(mg)</item>
+        <item>그램(g)</item>
+        <item>킬로그램(kg)</item>
+        <item>톤(t)</item>
+        <item>킬로톤(kt)</item>
+        <item>그레인(gr)</item>
+        <item>온스(oz)</item>
+        <item>파운드(lb)</item>
+        <item>돈</item>
+        <item>냥</item>
+        <item>근</item>
+        <item>관</item>
+
+    </string-array>
+
+    <string-array name="volume">
+        <item>시시(cc)</item>
+        <item>밀리리터(㎖)</item>
+        <item>데시리터(㎗)</item>
+        <item>리터(ℓ)</item>
+        <item>세제곱센티미터(cm³)</item>
+        <item>세제곱미터(m³)</item>
+        <item>세제곱인치(in³)</item>
+        <item>세제곱피트(ft³)</item>
+        <item>세제곱야드(yd³)</item>
+        <item>갤런(gal)</item>
+        <item>배럴(bbl)</item>
+        <item>온스(oz)</item>
+
+    </string-array>
+
+    <string-array name="temperature">
+        <item>섭씨온도(℃)</item>
+        <item>화씨온도(℉)</item>
+        <item>절대온도(K)</item>
+        <item>(°R)</item>
+
+
+    </string-array>
+
+    <string-array name="pressure">
+        <item>기압(atm)</item>
+        <item>파스칼(Pa)</item>
+        <item>헥토파스칼(hPa)</item>
+        <item>킬로파스칼(kPa)</item>
+        <item>메가파스칼(MPa)</item>
+        <item>dcyn/cm²</item>
+        <item>밀리바(mb)</item>
+        <item>바(bar)</item>
+        <item>kgf(cm²)</item>
+        <item>프사이(psi)</item>
+        <item>수은주밀리미터(mmHg)</item>
+        <item>inchHg</item>
+
+
+    </string-array>
+
+    <string-array name="speed">
+        <item>m/s</item>
+        <item>k/s</item>
+        <item>km/s</item>
+        <item>km/h</item>
+        <item>in/s</item>
+        <item>in/h</item>
+        <item>ft/s</item>
+        <item>ft/h</item>
+        <item>mi/s</item>
+        <item>mi/h</item>
+        <item>노트(kn)</item>
+        <item>마하(mach)</item>
+
+    </string-array>
+
+    <string-array name="mileage">
+        <item>km/l</item>
+        <item>mi/g</item>
+        <item>l/100km</item>
+
+    </string-array>
+
+
+    <string-array name="data">
+        <item>비트(bit)</item>
+        <item>바이트(B)</item>
+        <item>킬로바이트(KB)</item>
+        <item>메가바이트(MB)</item>
+        <item>기가바이트(GB)</item>
+        <item>테라바이트(TB)</item>
+        <item>페타바이트(PB)</item>
+        <item>엑사바이트(EB)</item>
+    </string-array>
+</resources>
